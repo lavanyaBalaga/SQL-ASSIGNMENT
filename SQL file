@@ -1,0 +1,11 @@
+CREATE TABLE InternshipApplication (
+    ApplicationID INT PRIMARY KEY AUTO_INCREMENT,
+    StudentName VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL UNIQUE,
+    DateOfBirth DATE,
+    University VARCHAR(255),
+    Major VARCHAR(255),
+    ResumeLink VARCHAR(255),
+    ApplicationDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    Status ENUM('Pending', 'Approved', 'Rejected') DEFAULT 'Pending'
+);
